@@ -1,4 +1,4 @@
-namespace ProduktErsteller
+namespace DataBase
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace ProduktErsteller
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new NeuesProdukt());
         }
     }
 }

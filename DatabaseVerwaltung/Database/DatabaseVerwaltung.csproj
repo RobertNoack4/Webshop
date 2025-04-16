@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseKategorie.cs" />
-    <Compile Include="Kategorie.cs" />
+    <Compile Include="DatabaseParameterStrings.cs" />
+    <Compile Include="Controller\DatabaseKategorieController.cs" />
+    <Compile Include="Modell\Bild.cs" />
+    <Compile Include="Modell\Kategorie.cs" />
+    <Compile Include="Modell\Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

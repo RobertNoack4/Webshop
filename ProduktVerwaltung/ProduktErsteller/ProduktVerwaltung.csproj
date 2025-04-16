@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Reference Include="Database">
-      <HintPath>..\..\Database\Database\bin\Debug\Database.dll</HintPath>
+      <HintPath>..\..\DatabaseVerwaltung\Database\bin\Debug\Database.dll</HintPath>
     </Reference>
   </ItemGroup>
 

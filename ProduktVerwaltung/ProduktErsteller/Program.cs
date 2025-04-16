@@ -1,4 +1,6 @@
-namespace DataBase
+using Views;
+
+namespace ProduktVerwaltung
 {
     internal static class Program
     {
@@ -11,7 +13,7 @@ namespace DataBase
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new NeuesProdukt());
+            Application.Run(new Main());
         }
     }
 }

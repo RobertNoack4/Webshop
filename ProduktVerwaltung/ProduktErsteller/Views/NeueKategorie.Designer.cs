@@ -1,4 +1,4 @@
-﻿namespace ProduktErsteller
+﻿namespace Views
 {
     partial class NeueKategorie
     {
@@ -77,7 +77,7 @@
         #endregion
 
         private Label lblNeueKategorie;
-        private TextBox txbNeueKategorie;
+        internal TextBox txbNeueKategorie;
         private Button btnUebernehmen;
     }
 }

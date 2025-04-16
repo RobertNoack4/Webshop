@@ -8,18 +8,18 @@ namespace Database.Modell
         public int? ProduktId { get; private set; }
 
         public string Name { get; private set; }
-        
+
         public string Beschreibung { get; private set; }
 
         public Kategorie Kategorie { get; private set; }
 
-        public Decimal? Preis {  get; private set; }
+        public Decimal? Preis { get; private set; }
 
         public int Stueckzahl { get; private set; }
 
-        public int? Rabatt {  get; private set; }
+        public int? Rabatt { get; private set; }
 
-        public Produkt (int? produktId, string name, string beschreibung, Kategorie kategorie, decimal? preis, int stueckzahl, int? rabatt)
+        public Produkt(int? produktId, string name, string beschreibung, Kategorie kategorie, decimal? preis, int stueckzahl, int? rabatt)
         {
             ProduktId = produktId;
             Name = name;

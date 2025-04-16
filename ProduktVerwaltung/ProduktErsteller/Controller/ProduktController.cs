@@ -1,6 +1,5 @@
 ﻿using Database.Modell;
 using DataBase;
-using Microsoft.IdentityModel.Abstractions;
 using Views;
 
 namespace ProduktVerwaltung.Controller
@@ -10,7 +9,7 @@ namespace ProduktVerwaltung.Controller
         internal NeuesProdukt NeuesProduktView { get; set; }
         internal Produkt? Produkt { get; set; }
 
-        public ProduktController(NeuesProdukt neuesProdukt) 
+        public ProduktController(NeuesProdukt neuesProdukt)
         {
             NeuesProduktView = neuesProdukt;
         }
@@ -19,12 +18,12 @@ namespace ProduktVerwaltung.Controller
         {
             ProduktModellAnlegen();
 
-            if(Produkt == null)
+            if (Produkt == null)
             {
                 return;
             }
 
-            if(Produkt.Kategorie.Id == null)
+            if (Produkt.Kategorie.Id == null)
             {
                 DatabaseKategorieController.AddKategorie(Produkt.Kategorie.Name, out int kategorieId, out Exception exception);
             }
@@ -34,7 +33,7 @@ namespace ProduktVerwaltung.Controller
         {
             NeuesProduktView.btnAddProdukt.Enabled = false;
 
-            if(String.IsNullOrEmpty(NeuesProduktView.txbProduktName.Text))
+            if (String.IsNullOrEmpty(NeuesProduktView.txbProduktName.Text))
             {
                 return;
             }
@@ -44,30 +43,30 @@ namespace ProduktVerwaltung.Controller
                 return;
             }
 
-            if(NeuesProduktView.cmbKategorie.SelectedItem is not Kategorie)
+            if (NeuesProduktView.cmbKategorie.SelectedItem is not Kategorie)
             {
                 return;
             }
 
-            if(!String.IsNullOrEmpty(NeuesProduktView.txbPreis.Text))
+            if (!String.IsNullOrEmpty(NeuesProduktView.txbPreis.Text))
             {
-                if(decimal.TryParse(NeuesProduktView.txbPreis.Text, out _) == false)
+                if (decimal.TryParse(NeuesProduktView.txbPreis.Text, out _) == false)
                 {
                     return;
                 }
             }
 
-            if(String.IsNullOrEmpty(NeuesProduktView.txbStueckzahl.Text))
+            if (String.IsNullOrEmpty(NeuesProduktView.txbStueckzahl.Text))
             {
                 return;
             }
 
-            if(int.TryParse(NeuesProduktView.txbStueckzahl.Text, out _) == false)
+            if (int.TryParse(NeuesProduktView.txbStueckzahl.Text, out _) == false)
             {
                 return;
             }
 
-            if(!String.IsNullOrEmpty(NeuesProduktView.txbRabatt.Text))
+            if (!String.IsNullOrEmpty(NeuesProduktView.txbRabatt.Text))
             {
                 if (int.TryParse(NeuesProduktView.txbRabatt.Text, out _) == false)
                 {
@@ -83,7 +82,7 @@ namespace ProduktVerwaltung.Controller
             decimal? preis;
             int? rabatt;
 
-            if(String.IsNullOrEmpty(NeuesProduktView.txbPreis.Text))
+            if (String.IsNullOrEmpty(NeuesProduktView.txbPreis.Text))
             {
                 preis = null;
             }
@@ -92,7 +91,7 @@ namespace ProduktVerwaltung.Controller
                 preis = decimal.Parse(NeuesProduktView.txbPreis.Text);
             }
 
-            if(String.IsNullOrEmpty(NeuesProduktView.txbRabatt.Text))
+            if (String.IsNullOrEmpty(NeuesProduktView.txbRabatt.Text))
             {
                 rabatt = null;
             }

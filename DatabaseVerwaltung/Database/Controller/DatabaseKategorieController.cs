@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using Database;
 using Microsoft.Data.SqlClient;
-using System.Data;
 
 namespace DataBase
 {
@@ -35,7 +35,7 @@ namespace DataBase
 
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 exception = ex;
                 return false;
@@ -55,7 +55,7 @@ namespace DataBase
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add(new SqlParameter(DatabaseParameterStrings.KategorieNameParameter, name));
-                        
+
                         var returnParameter = command.Parameters.Add(DatabaseParameterStrings.KategorieNameReturnParameter, SqlDbType.Int);
                         returnParameter.Direction = ParameterDirection.Output;
 

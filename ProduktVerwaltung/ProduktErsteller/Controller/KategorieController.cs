@@ -31,7 +31,7 @@ namespace ProduktVerwaltung.Controller
         {
             var newKategorie = new Kategorie(null, neueKategorie.txbNeueKategorie.Text);
 
-            if(NeueKategorieAngelegt)
+            if (NeueKategorieAngelegt)
             {
                 neuesProdukt.cmbKategorie.Items[neuesProdukt.cmbKategorie.Items.Count - 1] = newKategorie;
             }

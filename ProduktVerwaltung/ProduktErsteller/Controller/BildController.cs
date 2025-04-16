@@ -5,7 +5,7 @@ namespace ProduktVerwaltung.Controller
     internal class BildController
     {
         internal List<Bild> Bilder;
-        public BildController() 
+        public BildController()
         {
             Bilder = new List<Bild>();
         }
